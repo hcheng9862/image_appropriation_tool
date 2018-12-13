@@ -1,0 +1,111 @@
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<title>Image Appropriation Tool</title>
+
+
+h1{font-size: 64px;
+  font-family: 'ubuntu', sans-serif;
+  text-align: center;
+  color:rgb(97, 165, 16);
+}
+h2{font-size: 25px;
+  font-family: 'ubuntu', sans-serif;
+  text-align: right;
+  color:rgb(209, 67, 67);
+}
+
+.navigation{
+  margin:0;
+  background:gray;
+  display:-webkit-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex;
+}
+.canvas{
+  position: center;
+}
+
+.navigation a {
+  display: block;
+  padding: 1em;
+  color: white;
+}
+.navigation a:hover{
+  background: #gray
+}
+
+@media all and (max-width:800px){
+  .navigation{justify-content: space-around;}
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  align-content: center;
+  height:500px;
+}
+
+.flex-item{
+  padding:5px;
+  width:200px;
+  height: 200px;
+  margin-top: 10px;
+  line-height: 150px;
+  order: <0>;
+  flex-grow:<>;
+  flex-shrink:<>;
+  flex-basis:auto;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.flex-container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
